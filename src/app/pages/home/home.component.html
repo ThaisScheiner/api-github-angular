@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+  <div class="col-md-4">
+    <form action="">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Buscar por nome de usuário"
+          aria-label="Buscar por nome de usuário"
+          [(ngModel)]="username"
+          name="username"
+        />
+        <button (click)="getGitUser()" class="btn btn-success" type="button">
+          Pesquisar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="container">
+  @if (user) {
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card text-center shadow-sm p-2 mt-3" style="max-width: 320px;">
+        <img
+          [src]="user.avatar_url"
+          alt=""
+          class="card-img-top mx-auto mt-3"
+          style="width: 100px; height: 100px; border-radius: 50%;"
+        />
+        <div class="card-body p-2">
+          <h6 class="card-title m-1">{{ user.name }}</h6>
+          <p class="card-text text-muted m-1">{{ '@' + user.login }}</p>
+          <div class="row">
+            <div class="col">
+              <p class="m-0"><b>Seguidores</b></p>
+              <p class="m-0">{{ user.followers }}</p>
+            </div>
+            <div class="col">
+              <p class="m-0"><b>Seguindo</b></p>
+              <p class="m-0">{{ user.following }}</p>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-sm mt-2" [href]="user.html_url">Visitar perfil</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>
