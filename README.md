@@ -32,9 +32,6 @@ Este projeto é uma aplicação Angular que realiza requisições HTTP GET à AP
    ```
 5. Acesse no navegador: `http://localhost:4200`
 
-## 📜 Licença
-Este projeto está sob a licença MIT. Sinta-se à vontade para usá-lo e modificá-lo!
-
 ---
 📌 Feito com ❤️ usando Angular!
 
